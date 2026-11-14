@@ -1,0 +1,35 @@
+name: Generate REPWALA script
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: Fitness Short topic
+        required: true
+        type: string
+      angle:
+        description: Optional editorial angle
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate draft
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          test -n "$GEMINI_API_KEY" || (echo "::error::Add GEMINI_API_KEY in repository Actions secrets." && exit 1)
+          python script_generator.py --topic "${{ inputs.topic }}" --angle "${{ inputs.angle }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: repwala-script-draft
+          path: output/*.json
+          if-no-files-found: error
+          retention-days: 7
