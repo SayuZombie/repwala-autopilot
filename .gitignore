@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# REPWALA local secrets and generated files
+.env
+.env.*
+!.env.example
+output/
+.venv/
+venv/
