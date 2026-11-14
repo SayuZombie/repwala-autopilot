@@ -1,0 +1,31 @@
+{
+  "brand": "REPWALA",
+  "language": "Hinglish",
+  "topics": [
+    {
+      "id": "RW001",
+      "topic": "Fat loss without starving",
+      "pillar": "Fat loss"
+    },
+    {
+      "id": "RW002",
+      "topic": "Three muscle-growth mistakes",
+      "pillar": "Muscle building"
+    },
+    {
+      "id": "RW003",
+      "topic": "Affordable protein options in India",
+      "pillar": "Indian nutrition"
+    },
+    {
+      "id": "RW004",
+      "topic": "Creatine explained simply",
+      "pillar": "Fitness science"
+    },
+    {
+      "id": "RW005",
+      "topic": "Skinny-fat: what to focus on",
+      "pillar": "Body recomposition"
+    }
+  ]
+}
