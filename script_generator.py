@@ -7,7 +7,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument("--topic",required=True);p.add_argument("--angle",default="");a=p.parse_args()
  key=os.getenv("GEMINI_API_KEY")
  if not key: print("Missing GEMINI_API_KEY secret.",file=sys.stderr);return 1
- model=os.getenv("GEMINI_MODEL","gemini-2.5-flash")
+ model=os.getenv("GEMINI_MODEL","gemini-3.5-flash-lite")
  body={"contents":[{"parts":[{"text":RULES+"\nTopic: "+a.topic+"\nAngle: "+a.angle}]}],"generationConfig":{"temperature":0.55,"responseMimeType":"application/json"}}
  req=urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models/"+model+":generateContent?key="+key,data=json.dumps(body).encode(),headers={"Content-Type":"application/json"})
  try:
