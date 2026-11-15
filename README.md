@@ -11,8 +11,8 @@ A free-first, iPhone-friendly workflow for creating evidence-aware Hinglish fitn
 - [x] AI script generator (Gemini API; key stored outside the repo)
 - [x] Topic queue and safety rules
 - [x] Manual GitHub Actions test workflow
-- [ ] Voice generation
-- [ ] Vertical video assembly
+- [x] Hinglish neural voice generation (Edge TTS; internet required)
+- [x] Basic vertical video assembly (narrated, captioned, branded draft)
 - [ ] YouTube OAuth and private-upload test
 - [ ] Scheduling and analytics
 
