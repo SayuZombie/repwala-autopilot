@@ -1,1 +1,1 @@
-# Initial script generator uses Python standard library only.
+# Video workflow dependencies (installed by GitHub Actions)\nPillow\nedge-tts\n\n# FFmpeg is installed through apt in the workflow.\n
